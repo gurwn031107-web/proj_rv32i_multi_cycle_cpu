@@ -62,7 +62,7 @@ tb/
 Makefile                # VCS 컴파일 / 시뮬레이션 / Verdi
 ```
 
-## ▶ 실행
+## 실행
 
 ```bash
 make run     # VCS 컴파일 (UVM 1.2, 커버리지 옵션 포함)
