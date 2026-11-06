@@ -69,9 +69,3 @@ make run     # VCS 컴파일 (UVM 1.2, 커버리지 옵션 포함)
 make simv    # 시뮬레이션
 make verdi   # 파형 확인
 ```
-
-## Team
-
-- [@jeongmin-0113](https://github.com/jeongmin-0113)
-- [@hongs0396-max](https://github.com/hongs0396-max)
-- [@gurwn031107-web](https://github.com/gurwn031107-web)
