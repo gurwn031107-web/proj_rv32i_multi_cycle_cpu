@@ -1,4 +1,4 @@
-# 🖥️ RV32I Multi-Cycle CPU + APB Peripherals + UVM Verification
+# RV32I Multi-Cycle CPU + APB Peripherals + UVM Verification
 
 > SystemVerilog로 설계한 **RISC-V RV32I 멀티사이클 CPU**와 **APB 버스 주변장치**, 그리고 R/I-Type 명령어 **UVM 랜덤 검증 환경**
 
@@ -9,9 +9,7 @@
 | 언어 / 도구 | SystemVerilog, UVM 1.2, Synopsys VCS, Verdi |
 | 담당 | **UVM 검증 환경 설계 (`tb/tb_rv32i_uvm.sv`)**, datapath 수정 |
 
-<br>
-
-## 📌 구조
+## 구조
 
 ```
          ┌──────────────┐   instr    ┌──────────────────────────────┐
@@ -33,9 +31,7 @@
 - **APB Master**: CPU의 Load/Store를 APB 트랜잭션(SETUP → ACCESS)으로 변환, 주소로 슬레이브 선택
 - **주변장치**: APB BRAM, GPI(스위치 입력), GPO(LED 출력)
 
-<br>
-
-## ✅ UVM 검증 (담당)
+## UVM 검증 (담당)
 
 R-Type 10개 + I-Type 9개, 총 **19개 명령어**를 대상으로 한 UVM 랜덤 검증 환경
 
@@ -49,9 +45,7 @@ R-Type 10개 + I-Type 9개, 총 **19개 명령어**를 대상으로 한 UVM 랜�
 
 - Edge case: `0`, `1`, `0xFFFFFFFF`, `0x80000000`, `0x7FFFFFFF`, shamt `0/1/15/16/31` 등 → 19개 명령어 × 6 = **114개 edge 시나리오**
 
-<br>
-
-## 📁 폴더 구조
+## 폴더 구조
 
 ```
 rtl/
@@ -68,9 +62,7 @@ tb/
 Makefile                # VCS 컴파일 / 시뮬레이션 / Verdi
 ```
 
-<br>
-
-## ▶️ 실행
+## ▶ 실행
 
 ```bash
 make run     # VCS 컴파일 (UVM 1.2, 커버리지 옵션 포함)
@@ -78,9 +70,7 @@ make simv    # 시뮬레이션
 make verdi   # 파형 확인
 ```
 
-<br>
-
-## 👥 Team
+## Team
 
 - [@jeongmin-0113](https://github.com/jeongmin-0113)
 - [@hongs0396-max](https://github.com/hongs0396-max)
